@@ -1,0 +1,44 @@
+package selfProgramming;
+
+public class testMax {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		 	int marks[] = {55,67,89,51,88};
+		    int sum,average,highmark,highest;
+		    
+		    System.out.println("The number of subjects : " + marks.length);
+		    printMarks(marks);
+		    sum = sumMarks(marks);
+		    System.out.println("\nThe sum of marks is " + sum);
+		    average = sum/marks.length;
+		    System.out.println("Average is " + average);
+		    highest = highmark(marks);
+		    System.out.println("The highest mark is " + highest);
+			}
+			
+			public static void printMarks(int[] marks) {
+				
+				for(int i=0; i< marks.length; i++) 
+					System.out.print(marks[i] + " ");
+				
+			}
+
+			public static int sumMarks(int[] marks) {
+				 int totalmarks =0;
+				for (int i=0; i<marks.length; i++)
+					totalmarks = totalmarks + marks[i];
+				return totalmarks;
+			}
+		    
+			public static int highmark(int[]marks) {
+				
+				int highest =-99;
+				for (int i =0; i<marks.length; i++)
+					
+					if (marks[i]>highest)
+						highest = marks[i];
+				
+				return highest;
+			}
+		}
